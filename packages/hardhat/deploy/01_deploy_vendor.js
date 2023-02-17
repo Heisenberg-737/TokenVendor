@@ -20,16 +20,16 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const vendor = await ethers.getContractAt("Vendor", deployer);
 
   // Todo: transfer the tokens to the vendor
-  console.log("\n 🏵  Sending all 1000 tokens to the vendor...\n");
+  // console.log("\n 🏵  Sending all 1000 tokens to the vendor...\n");
   
-  await yourToken.transfer(vendor.address, ethers.utils.parseEther("1000"));
+  // await yourToken.transfer(vendor.address, ethers.utils.parseEther("1000"));
 
-  console.log("\n    ✅ confirming...\n");
-  await sleep(5000); // wait 5 seconds for transaction to propagate
+  // console.log("\n    ✅ confirming...\n");
+  // await sleep(5000); // wait 5 seconds for transaction to propagate
 
   // ToDo: change address to your frontend address vvvv
-  console.log("\n 🤹  Sending ownership to frontend address...\n")
-  await vendor.transferOwnership("0x18fFE4dADcCe63A074Ef9cfe327cAb9AD4Ad9f76");
+  // console.log("\n 🤹  Sending ownership to frontend address...\n")
+  // await vendor.transferOwnership("0x18fFE4dADcCe63A074Ef9cfe327cAb9AD4Ad9f76");
   // console.log("\n    ✅ confirming...\n");
   // const ownershipResult = await ownershipTransaction.wait();
 
