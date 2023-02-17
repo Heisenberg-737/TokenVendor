@@ -66,5 +66,10 @@
       "**/hardhat-ts/**"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "ethers": "^6.0.4",
+    "hardhat": "^2.12.7"
+  }
 }

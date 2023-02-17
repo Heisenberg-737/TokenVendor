@@ -14,14 +14,14 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     log: true,
   });
 
-  const yourToken = await ethers.getContract("YourToken", deployer);
+  const yourToken = await ethers.getContractAt("YourToken", deployer);
 
   // Todo: transfer tokens to frontend address
   // const result = await yourToken.transfer("0x18fFE4dADcCe63A074Ef9cfe327cAb9AD4Ad9f76", ethers.utils.parseEther("1000") );
 
   // ToDo: To take ownership of yourContract using the ownable library uncomment next line and add the
   // address you want to be the owner.
-  // yourContract.transferOwnership(YOUR_ADDRESS_HERE);
+  // yourContract.transferOwnership("0x18fFE4dADcCe63A074Ef9cfe327cAb9AD4Ad9f76");
 
   // if you want to instantiate a version of a contract at a specific address!
   // const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A");
@@ -44,19 +44,19 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   // });
 
   // ToDo: Verify your contract with Etherscan for public chains
-  // if (chainId !== "31337") {
-  //   try {
-  //     console.log(" 🎫 Verifing Contract on Etherscan... ");
-  //     await sleep( 5000 ) // wait 5 seconds for deployment to propagate
-  //     await run("verify:verify", {
-  //       address: yourToken.address,
-  //       contract: "contracts/YourToken.sol:YourToken",
-  //       constructorArguments: [],
-  //     });
-  //   } catch (e) {
-  //     console.log(" ⚠️ Failed to verify contract on Etherscan ");
-  //   }
-  // }
+//   if (chainId !== "31337") {
+//     try {
+//       console.log(" 🎫 Verifing Contract on Etherscan... ");
+//       await sleep( 5000 ) // wait 5 seconds for deployment to propagate
+//       await run("verify:verify", {
+//         address: yourToken.address,
+//         contract: "contracts/YourToken.sol:YourToken",
+//         constructorArguments: [],
+//       });
+//     } catch (e) {
+//       console.log(" ⚠️ Failed to verify contract on Etherscan ");
+//     }
+//   }
 };
 
 function sleep(ms) {
